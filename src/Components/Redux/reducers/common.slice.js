@@ -65,7 +65,7 @@ export const getMixSizeByShapeList = createAsyncThunk(
   masterType => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/mix-shape-wise-size-list?ShapeID=${masterType}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/mix-shape-wise-size-list?ShapeID=${masterType}`)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -81,7 +81,7 @@ export const getDiamondDetailList = createAsyncThunk(
   masterType => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/parameter-list-by-name/master-types-by-name?MasterType=${masterType}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/parameter-list-by-name/master-types-by-name?MasterType=${masterType}`)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -97,7 +97,7 @@ export const getWebConfigurationType = createAsyncThunk(
   masterType => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-web-configurationtype-list')
+        .post('https://api.excellentjewels.sbs/mobile-api/get-web-configurationtype-list')
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -113,7 +113,7 @@ export const getWebConfigurationTypeDetail = createAsyncThunk(
   typeId => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/get-web-configuration-details-list?Type_ID=${typeId}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/get-web-configuration-details-list?Type_ID=${typeId}`)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -129,7 +129,7 @@ export const getMixDiamondDetailList = createAsyncThunk(
   masterType => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/get-mix-detail-data?Packet_Id=${masterType}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/get-mix-detail-data?Packet_Id=${masterType}`)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -201,7 +201,7 @@ export const getMixDimaondFilterDataList = createAsyncThunk(
             : '',
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/mix-stock-data', obj, {
+        .post('https://api.excellentjewels.sbs/mobile-api/mix-stock-data', obj, {
           cancelToken: ajaxMixDiamondListRequest.token,
         })
         .then(({ data }) => {
@@ -229,7 +229,7 @@ export const getMixWatchStockList = createAsyncThunk(
         DiamondType: props.diamondType,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-packet-watchlist', obj, {
+        .post('https://api.excellentjewels.sbs/mobile-api/get-packet-watchlist', obj, {
           cancelToken: ajaxWatchListRequest.token,
         })
         .then(({ data }) => {
@@ -261,7 +261,7 @@ export const addToWatchMixDimaondList = createAsyncThunk(
         Packet_Id: props?.packetId ? props.packetId : '',
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/add-to-packet-watchlist', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/add-to-packet-watchlist', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data });
@@ -296,7 +296,7 @@ export const removeToWatchMixDimaondList = createAsyncThunk(
         Packet_Id: props?.packetId ? props.packetId : '',
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/remove-from-packet-watchlist', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/remove-from-packet-watchlist', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data });
@@ -323,7 +323,7 @@ export const createDiamondInquiry = createAsyncThunk(
   (props, { dispatch }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/Jewellery-Inquiry', props)
+        .post('https://api.excellentjewels.sbs/mobile-api/Jewellery-Inquiry', props)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result.rows });
@@ -356,7 +356,7 @@ export const createMixDiamondInquiry = createAsyncThunk(
     };
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-mix-packet-inquiry', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-mix-packet-inquiry', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });

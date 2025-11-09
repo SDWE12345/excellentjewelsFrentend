@@ -805,7 +805,7 @@ export default function ParcelGoods() {
                                     >
                                       <span>
                                         <img
-                                          src={`http://72.61.170.111:8088/uploads/Diamonds/${shapeObj.MasterTypeValue_Code?.replaceAll(
+                                          src={`https://api.excellentjewels.sbs/uploads/Diamonds/${shapeObj.MasterTypeValue_Code?.replaceAll(
                                             ' ',
                                             '',
                                           )}.svg`}
@@ -1489,7 +1489,7 @@ export default function ParcelGoods() {
                                 <label htmlFor={shapeObj.MasterTypeValue_Code}>
                                   <span>
                                     <img
-                                      src={`http://72.61.170.111:8088/uploads/Diamonds/${shapeObj.MasterTypeValue_Code?.replaceAll(
+                                      src={`https://api.excellentjewels.sbs/uploads/Diamonds/${shapeObj.MasterTypeValue_Code?.replaceAll(
                                         ' ',
                                         '',
                                       )}.svg`}

@@ -46,7 +46,7 @@ const PayPalModal = ({ orderDetail, onSuccess, onCancel, onError }) => {
     window.paypal.Buttons({
       createOrder: async () => {
         try {
-          const res = await fetch('http://72.61.170.111:8088/api/paypal/create-order', {
+          const res = await fetch('https://api.excellentjewels.sbs/api/paypal/create-order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ orderDetail }),
@@ -66,7 +66,7 @@ const PayPalModal = ({ orderDetail, onSuccess, onCancel, onError }) => {
       },
       onApprove: async (data) => {
         try {
-          const res = await fetch('http://72.61.170.111:8088/api/paypal/capture-order', {
+          const res = await fetch('https://api.excellentjewels.sbs/api/paypal/capture-order', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({

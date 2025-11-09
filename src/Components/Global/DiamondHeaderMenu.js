@@ -45,7 +45,7 @@ export const DiamondHeaderMenu = ({
                       }}
                     >
                       <img
-                        src={`http://72.61.170.111:8088/uploads/Diamonds/${item.DisplayName?.replaceAll(
+                        src={`https://api.excellentjewels.sbs/uploads/Diamonds/${item.DisplayName?.replaceAll(
                           ' ',
                           '',
                         )}.svg`}
@@ -104,7 +104,7 @@ export const DiamondHeaderMenu = ({
                       }}
                     >
                       <img
-                        src={`http://72.61.170.111:8088/uploads/Diamonds/${item.DisplayName?.replaceAll(
+                        src={`https://api.excellentjewels.sbs/uploads/Diamonds/${item.DisplayName?.replaceAll(
                           ' ',
                           '',
                         )}.svg`}

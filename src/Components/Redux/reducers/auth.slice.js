@@ -58,7 +58,7 @@ export const registration = createAsyncThunk(
         City_ID: 0,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/registration/signup', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/registration/signup', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -81,7 +81,7 @@ export const contactDetail = createAsyncThunk(
   (props, { dispatch }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/save-contact-detail', props)
+        .post('https://api.excellentjewels.sbs/mobile-api/save-contact-detail', props)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -109,7 +109,7 @@ export const login = createAsyncThunk(
         Password: data.password ? data.password : '',
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/registration/login', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/registration/login', obj)
         .then(async ({ data }) => {
           if (data.IsSuccess) {
             Object.keys(data.Result)?.length > 0 &&
@@ -316,7 +316,7 @@ export const forgetPassword = createAsyncThunk(
         EmailID: data.EmailID,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/forget-password', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/forget-password', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -341,7 +341,7 @@ export const logout = createAsyncThunk('user-logout', (data, { dispatch }) => {
       UserID: data.UserID,
     };
     axios
-      .post('http://72.61.170.111:8088/mobile-api/logout', obj)
+      .post('https://api.excellentjewels.sbs/mobile-api/logout', obj)
       .then(({ data }) => {
         if (data?.IsSuccess) {
           clearToken();

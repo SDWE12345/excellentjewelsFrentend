@@ -48,7 +48,7 @@ export const getCountryList = createAsyncThunk(
         return;
       }
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-country-list')
+        .post('https://api.excellentjewels.sbs/mobile-api/get-country-list')
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -65,7 +65,7 @@ export const getStateList = createAsyncThunk('stateList', data => {
     };
     axios
       .post(
-        `http://72.61.170.111:8088/mobile-api/get-state-list?${obj.CountryID ? `CountryID=${obj.CountryID}` : ''}`,
+        `https://api.excellentjewels.sbs/mobile-api/get-state-list?${obj.CountryID ? `CountryID=${obj.CountryID}` : ''}`,
       )
       .then(({ data }) => {
         resolve({ data: data.Result });
@@ -83,7 +83,7 @@ export const getCityList = createAsyncThunk('cityList', data => {
     };
     axios
       .post(
-        `http://72.61.170.111:8088/mobile-api/get-city-list?${obj.CountryID
+        `https://api.excellentjewels.sbs/mobile-api/get-city-list?${obj.CountryID
           ? `CountryID=${obj.CountryID}&StateID=${obj.StateID}`
           : ''
         }`,
@@ -104,7 +104,7 @@ export const getSeavedSearchList = createAsyncThunk(
         UserID: data.UserID,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-saved-search-template-list', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-saved-search-template-list', obj)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -123,7 +123,7 @@ export const getCartStockCount = createAsyncThunk(
         Diamond_Type: '',
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/cart-count', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/cart-count', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -143,7 +143,7 @@ export const confirmOrder = createAsyncThunk(
   (data, { dispatch }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/jewellery-diamond-cart-to-order-with-setting', data)
+        .post('https://api.excellentjewels.sbs/mobile-api/jewellery-diamond-cart-to-order-with-setting', data)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result.rows });
@@ -296,7 +296,7 @@ export const getTotalSearchDiamond = createAsyncThunk(
       newFinalObject.RatioF = data.ratioFrom ? data.ratioFrom : '';
       newFinalObject.RatioT = data.ratioTo ? data.ratioTo : '';
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-search-stock-count', newFinalObject)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-search-stock-count', newFinalObject)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -459,7 +459,7 @@ export const getSearchDiamondFilterList = createAsyncThunk(
           ? data.StockStatus
           : '';
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-search-stock', newFinalObject, {
+        .post('https://api.excellentjewels.sbs/mobile-api/get-search-stock', newFinalObject, {
           cancelToken: ajaxSearchStockListRequest.token,
         })
         .then(({ data }) => {
@@ -491,7 +491,7 @@ export const removeFromSaveSearchTemplate = createAsyncThunk(
         UserID: data.UserID,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/remove-saved-search-template', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/remove-saved-search-template', obj)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -519,7 +519,7 @@ export const getStockDetailDna = createAsyncThunk(
         BackEndClientId: 0,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-stock-detail-dna', newFinalObject)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-stock-detail-dna', newFinalObject)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -542,7 +542,7 @@ export const getExportStockData = createAsyncThunk(
         BackEndClientId: 0,
       };
       axios
-        .post('http://72.61.170.111:8088/mobile-api/export-stock-data', obj)
+        .post('https://api.excellentjewels.sbs/mobile-api/export-stock-data', obj)
         .then(({ data }) => {
           resolve({ data: data.Result });
         })
@@ -557,7 +557,7 @@ export const getSimilarStockList = createAsyncThunk(
   data => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-simillar-stock-detail-dna', data)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-simillar-stock-detail-dna', data)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -576,7 +576,7 @@ export const getStockCopytoClipboardString = createAsyncThunk(
   data => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/Stock-Copy-to-Clipboard', data)
+        .post('https://api.excellentjewels.sbs/mobile-api/Stock-Copy-to-Clipboard', data)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -595,7 +595,7 @@ export const getJewelleryCopytoClipboardString = createAsyncThunk(
   ({ JewelleryNo }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/jewellery-Copy-to-Clipboard?JewelleryNo=${JewelleryNo}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/jewellery-Copy-to-Clipboard?JewelleryNo=${JewelleryNo}`)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -614,7 +614,7 @@ export const getMixDiamondCopyToClipboardString = createAsyncThunk(
   ({ PacketName }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post(`http://72.61.170.111:8088/mobile-api/Mix-Copy-to-Clipboard?PacketName=${PacketName}`)
+        .post(`https://api.excellentjewels.sbs/mobile-api/Mix-Copy-to-Clipboard?PacketName=${PacketName}`)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });
@@ -633,7 +633,7 @@ export const sendDiamondDetailMail = createAsyncThunk(
   (data, { dispatch }) => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/send-diamond-mail', data)
+        .post('https://api.excellentjewels.sbs/mobile-api/send-diamond-mail', data)
         .then(({ data }) => {
           if (data.IsSuccess) {
             resolve({ data: data.Result });

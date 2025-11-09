@@ -432,7 +432,7 @@ const ShoppingCart = () => {
       }
 
       // Step 7: Make API call
-      const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://72.61.170.111:8088';
+      const API_BASE_URL = process.env.REACT_APP_API_URL || 'https://api.excellentjewels.sbs';
       const response = await axios.post(
         `${API_BASE_URL}/mobile-api/order/api/v1/orders/create`,
         orderPayload,

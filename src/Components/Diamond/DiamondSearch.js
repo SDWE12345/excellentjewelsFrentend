@@ -1530,7 +1530,7 @@ const DiamondSearch = () => {
                               />
                               <label htmlFor={item.DisplayName}>
                                 <img
-                                  src={`http://72.61.170.111:8088/uploads/Diamonds/${item.DisplayName}.svg`}
+                                  src={`https://api.excellentjewels.sbs/uploads/Diamonds/${item.DisplayName}.svg`}
                                   alt={item.DisplayName}
                                   className="injectable"
                                 />

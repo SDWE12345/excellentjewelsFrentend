@@ -28,7 +28,7 @@ export const getMyOrderList = createAsyncThunk(
   myOrderFilter => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-order-list', myOrderFilter)
+        .post('https://api.excellentjewels.sbs/mobile-api/get-order-list', myOrderFilter)
         .then(({ data }) => {
           if (data?.Result?.rows?.length > 0) {
             resolve({ data: data?.Result?.rows });
@@ -48,7 +48,7 @@ export const getGeneralSetting = createAsyncThunk(
   myOrderFilter => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/general-setting', myOrderFilter)
+        .post('https://api.excellentjewels.sbs/mobile-api/general-setting', myOrderFilter)
         .then(({ data }) => {
           if (
             data?.Result?.GeneralSetting &&
@@ -71,7 +71,7 @@ export const getCurrentEventsList = createAsyncThunk(
   () => {
     return new Promise((resolve, reject) => {
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-web-configuration-details-list?Type_ID=6')
+        .post('https://api.excellentjewels.sbs/mobile-api/get-web-configuration-details-list?Type_ID=6')
         .then(({ data }) => {
           if (data?.Result?.length > 0) {
             resolve({ data: data?.Result });
@@ -96,7 +96,7 @@ export const getCountryWiseShippingChargeList = createAsyncThunk(
         return;
       }
       axios
-        .post('http://72.61.170.111:8088/mobile-api/get-country-with-shipping-charge-list')
+        .post('https://api.excellentjewels.sbs/mobile-api/get-country-with-shipping-charge-list')
         .then(({ data }) => {
           if (data?.Result?.length > 0) {
             resolve({ data: data?.Result });
@@ -135,7 +135,7 @@ export const getMyOrderDetail = createAsyncThunk(
   'order/getMyOrderDetail',
   async ({ orderId, customerId }, { rejectWithValue }) => {
     try {
-      const response = await axios.get('http://72.61.170.111:8088/mobile-api/get-order-detail-by-order-id-withsetting', {
+      const response = await axios.get('https://api.excellentjewels.sbs/mobile-api/get-order-detail-by-order-id-withsetting', {
         params: { orderId, customerId }
       });
       console.log(
@@ -154,7 +154,7 @@ export const getMyOrderDetail = createAsyncThunk(
 //     return new Promise((resolve, reject) => {
 //       axios
 //         .post(
-//           `http://72.61.170.111:8088/mobile-api/get-order-detail-by-order-id-withsetting?Web_OrderId=${myOrderFilter.Web_OrderId}&UserID=${myOrderFilter.UserID}`,
+//           `https://api.excellentjewels.sbs/mobile-api/get-order-detail-by-order-id-withsetting?Web_OrderId=${myOrderFilter.Web_OrderId}&UserID=${myOrderFilter.UserID}`,
 //         )
 //         .then(({ data }) => {
 //           if (data?.Result) {

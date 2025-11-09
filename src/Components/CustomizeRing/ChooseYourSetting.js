@@ -119,7 +119,7 @@ const ChooseYourSetting = ({
               <label htmlFor={`ring_style_${item.MasterSubTypeValue}`}>
                 <sapn>
                   <img
-                    src={`http://72.61.170.111:8088/Content/DomainData/excellentjewels.com:8080/img/Jewellery/Style/${item.MasterSubTypeValue_Code}.svg`}
+                    src={`https://api.excellentjewels.sbs/Content/DomainData/excellentjewels.com:8080/img/Jewellery/Style/${item.MasterSubTypeValue_Code}.svg`}
                     alt={item.MasterSubTypeValue_Code}
                     onError={handleSubTypeError}
                   />
@@ -406,7 +406,7 @@ const ChooseYourSetting = ({
                                 <label htmlFor={shapeObj.MasterTypeValue_Code}>
                                   <span>
                                     <img
-                                      src={`http://72.61.170.111:8088/uploads/Diamonds/${shapeObj.MasterTypeValue_Code}.svg`}
+                                      src={`https://api.excellentjewels.sbs/uploads/Diamonds/${shapeObj.MasterTypeValue_Code}.svg`}
                                       alt={shapeObj.MasterTypeValue_Code}
                                       onError={handleImageErrorOnShape}
                                     />

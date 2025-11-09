@@ -5,7 +5,7 @@ import _ from 'lodash';
 import { showMessage } from './common.slice';
 
 // API Base URL - should be moved to config
-const API_BASE_URL = 'http://72.61.170.111:8088/mobile-api';
+const API_BASE_URL = 'https://api.excellentjewels.sbs/mobile-api';
 
 // Initial State
 const initialState = {
