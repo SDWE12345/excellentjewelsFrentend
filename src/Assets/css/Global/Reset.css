@@ -31039,7 +31039,7 @@ input.p-dropdown-label {
     -webkit-margin-start: var(--swiper-centered-offset-before);
     margin-inline-start:var(--swiper-centered-offset-before)}
 
-.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper: before {
+.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper {
     height:100%;
     min-height: 1px;
     width: var(--swiper-centered-offset-after)
@@ -31049,7 +31049,7 @@ input.p-dropdown-label {
     -webkit-margin-before: var(--swiper-centered-offset-before);
     margin-block-start:var(--swiper-centered-offset-before)}
 
-.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper: before {
+.swiper-css-mode.swiper-centered.swiper-vertical>.swiper-wrapper {
     height:var(--swiper-centered-offset-after);
     min-width: 1px;
     width: 100%
