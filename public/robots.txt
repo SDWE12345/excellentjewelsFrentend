@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /cart/
+Disallow: /my-account/
+
+Sitemap: https://www.excellentjewels.com/sitemap.xml
