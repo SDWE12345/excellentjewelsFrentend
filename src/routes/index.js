@@ -70,6 +70,7 @@ const HipHopDetail = lazy(() => import('../Components/HipHopJewellery/HipHopDeta
 // Private Routes
 import PrivateRouter from './PrivateRouter';
 import Loader from 'Components/Global/Loader';
+import ChooseDiamond from 'Components/CustomizeRing/ChooseDiamond';
 
 const Index = () => {
   useEffect(() => {
@@ -98,6 +99,7 @@ const Index = () => {
         <Route path="/cart" element={<ShoppingCart />} />
         <Route path="/jewellery" element={<Jewellery />} />
         <Route path="/jewellery-detail" element={<JewelleryDetail />} />
+        <Route path="/setting-jewellery-wise" element={<ChooseDiamond />} />
         <Route path="/hip-hop-jewellery" element={<HipHopJewellery />} />
         <Route path="/hip-hop-jewellery-detail" element={<HipHopDetail />} />
         <Route path="/about-us" element={<About />} />
