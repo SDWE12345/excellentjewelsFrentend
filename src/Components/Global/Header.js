@@ -755,7 +755,7 @@ const Header = () => {
                       </div>
                     )}
                   </li>
-                  <li
+                  {/* <li
                     className="megamenu_Wrapper"
                     onMouseEnter={handleHipHopJewelleryMouseEnter}
                     onMouseLeave={handleHipHopJewelleryMouseLeave}
@@ -811,7 +811,7 @@ const Header = () => {
                         />
                       </div>
                     )}
-                  </li>
+                  </li> */}
                   {/* <li>
                     <Link
                       to="/parcel-goods"
