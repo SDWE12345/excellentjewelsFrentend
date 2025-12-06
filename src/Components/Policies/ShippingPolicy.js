@@ -37,13 +37,13 @@ const ShippingPolicy = () => {
                   <li>
                     <strong>Domestic Delivery Timeline:</strong>
                     Orders within India are typically delivered within
-                    <strong>5–7 business days</strong> from the date of dispatch.
+                    <strong>3–5 business days</strong> from the date of dispatch.
                   </li>
 
                   <li>
                     <strong>International Delivery Timeline:</strong>
                     International orders typically take
-                    <strong>10–15 business days</strong> depending on the destination country,
+                    <strong>7–12 business days</strong> depending on the destination country,
                     customs clearance, and courier availability.
                   </li>
 
