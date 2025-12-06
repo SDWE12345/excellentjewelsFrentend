@@ -22,54 +22,71 @@ const ShippingPolicy = () => {
                 <ul>
                   <li>
                     We ship worldwide & we make sure that you get your shipment
-                    as earliest as possible provided there is no delay in
-                    customs clearance, public holiday, courier location, or
-                    circumstance which is beyond human control.
+                    as early as possible provided there is no delay in
+                    customs clearance, public holidays, courier location, or
+                    any circumstance beyond our control.
                   </li>
+
                   <li>
-                    We ship through one of the reputed &standard shipping agency
-                    for national & international shipment. Once ordered product
-                    is been dispatch we update tracking number in buyer purchase
-                    item. Delivery depends upon location.
+                    We ship through reputed and standard shipping partners for
+                    both domestic and international shipments. Once the product
+                    is dispatched, the tracking number will be updated in the
+                    buyer’s order details.
                   </li>
+
                   <li>
-                    We don't charge any sales tax/import Duties/Taxes etc on any
-                    sales made internationally. Buyer will be responsible for
-                    all import duties/Taxes According to the destination
-                    country.
+                    <strong>Domestic Delivery Timeline:</strong>
+                    Orders within India are typically delivered within
+                    <strong>5–7 business days</strong> from the date of dispatch.
                   </li>
+
+                  <li>
+                    <strong>International Delivery Timeline:</strong>
+                    International orders typically take
+                    <strong>10–15 business days</strong> depending on the destination country,
+                    customs clearance, and courier availability.
+                  </li>
+
+                  <li>
+                    We don't charge any sales tax/import duties/taxes on
+                    international orders. Buyers are responsible for all import
+                    duties/taxes levied by their respective countries.
+                  </li>
+
                   <li>
                     Shipping fees are not refundable under any circumstances.
                   </li>
+
                   <li>
-                    we use Logistics Like FedEx,UPS, MALKA AMIT JK, Depend on
-                    Destination country and Goods Value.
+                    We use logistics partners such as FedEx, UPS, Malka Amit JK,
+                    depending on the destination country and product value.
                   </li>
+
                   <li>
                     Import duties, taxes and charges are not included in the
-                    item price or the shipping charges. These charges are the
-                    buyer's responsibility.
+                    item price or shipping charges. These charges are the buyer’s
+                    responsibility.
                   </li>
+
                   <li>
-                    Because of any reason goods stuck in the custom at
-                    destination country, in that case it is buyers
-                    responsibility to make it release with any necessary
-                    documents and information which is required through the
-                    customs
+                    If goods are held by customs at the destination country for
+                    any reason, the buyer is responsible for providing all
+                    required documents or information to clear the shipment.
                   </li>
+
                   <li>
-                    By Placing an order, we consider you have enough knowledge
-                    about importing goods internationally and you have all the
-                    necessary documents and information which required to clear
-                    the goods from customs.
+                    By placing an order, you confirm that you understand the
+                    import regulations of your country and have the required
+                    documents to clear the goods from customs.
                   </li>
+
                   <li>
-                    Indian merchants are unable to mark merchandise values below
-                    actual purchase price or mark international parcels as
-                    "gifts" Indian and international government regulations
-                    prohibit such practices
+                    Indian merchants are not permitted to undervalue shipments or
+                    mark international packages as "gifts." Government regulations
+                    prohibit such practices.
                   </li>
                 </ul>
+
               </div>
             </Col>
           </Row>
